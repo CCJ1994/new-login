@@ -5,6 +5,7 @@ include_once('header.php');
 
   <div class="container mt-5">
     <div class="col-6 border bg-light m-auto" style="height:300px;box-shadow:1px 1px 10px #185761">
+      <div class="text-center"><?php if(isset($_GET['meg'])){echo $_GET['meg'];}?></div>
       <h5 class="text-center py-3 border-bottom">會員登入</h5>
       <form action="check.php" class="mt-3 col-6 mx-auto" method="post">
         <p class="text-center">帳號：<input type="text" name="acc"></p>
