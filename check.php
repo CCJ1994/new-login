@@ -7,7 +7,15 @@
  * 5. 檢查會員身份及權限
  * 6. 依據會員身份導向不同的頁面
  */
+$dsn="mysql:host=localhost;dbname=member;charset=utf8";
+$pdo= new PDO($dsn,'root','');
 
+$acc=$_POST['acc'];
+$pw=$_POST['pw'];
 
+$sql="select * from `login` where `acc`='$acc' && `pw`='$pw'";
+$check=$pdo->query($sql)->fetch();
+
+print_r($check);
 
 ?>
