@@ -1,7 +1,7 @@
 <?php
 
 setcookie("login",'',-100);
-header("localtion:index.php");
+header("location:index.php");
 
 
 
