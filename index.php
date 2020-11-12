@@ -1,6 +1,6 @@
 <?php
   include_once('header.php');
-  if(isset($_COOKIE['login'])){
+  if(isset($_SESSION['login'])){
     $dsn="mysql:host=localhost;dbname=member;charset=utf8";
     $pdo=new PDO($dsn,'root','');
 

@@ -11,8 +11,9 @@ include_once('header.php');
 
     <span>
     <?php
-    if(isset($_COOKIE['login'])){
-        echo $_COOKIE['login']."歡迎";
+    session_start();
+    if(isset($_SESSION['login'])){
+        echo $_SESSION['login']."歡迎";
     }
     ?>
     <span style="font-size:1rem"><a href="logout.php">登出</a></span>

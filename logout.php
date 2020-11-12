@@ -1,7 +1,8 @@
 <?php
 
-setcookie("login",'',-100);
-header("localtion:index.php");
+unset($_SESSION['login']);
+
+header("location:index.php");
 
 
 
