@@ -5,11 +5,25 @@ include_once('header.php');
 
 <body>
     <h1 class="text-center">管理中心</h1>
-    <?php
 
+    <div class="col-8 mx-auto d-flex justify-content-between">
+
+
+    <span>
+    <?php
     if(isset($_COOKIE['login'])){
         echo $_COOKIE['login']."歡迎";
     }
+    ?>
+    <span style="font-size:1rem"><a href="logout.php">登出</a></span>
+    </span>
+
+    </div>
+
+
+    <?php
+
+    
 
     $dsn="mysql:host=localhost;dbname=member;charset=utf8";
     $pdo= new PDO($dsn,'root','');
