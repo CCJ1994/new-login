@@ -7,6 +7,10 @@ include_once('header.php');
     <h1 class="text-center">管理中心</h1>
     <?php
 
+    if(isset($_COOKIE['login'])){
+        echo $_COOKIE['login']."歡迎";
+    }
+
     $dsn="mysql:host=localhost;dbname=member;charset=utf8";
     $pdo= new PDO($dsn,'root','');
     $sql="select `login`.`id`,`acc`,`name`,`role`,`birthday`,`email`,`addr`,`create_time` 

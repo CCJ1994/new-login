@@ -1,5 +1,31 @@
 <?php
-include_once('header.php');
+  include_once('header.php');
+  if(isset($_COOKIE['login'])){
+    $dsn="mysql:host=localhost;dbname=member;charset=utf8";
+    $pdo=new PDO($dsn,'root','');
+
+    $sql_user="select `member`.`role`,`login`.`acc` from `member`,`login` where `member`.`login_id`=`login`.`id` && `acc`='{$_COOKIE['login']}'";
+    echo $sql_user;
+    $user=$pdo->query($sql_user)->fetch(PDO::FETCH_ASSOC);
+    echo "<pre>";
+    print_r($user);
+    echo "</pre>";
+
+    // exit();
+
+    switch($user['role']){
+      case '會員':
+        header('location:mem.php');
+      break;
+      case 'VIP':
+        header('location:vip.php');
+      break;
+      case '管理員':
+        header('location:admin.php');
+      break;
+    }
+
+  }
 ?>
 <body>
 
