@@ -6,11 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
     <?php
-      if(isset($title)){
-        echo $title;
-      }else{
-        echo "登入頁面";
-      };
+    if(isset($title)){
+      echo $title;
+    }else{
+      echo "登入畫面";
+    }
     ?>
   </title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"

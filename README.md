@@ -2,7 +2,7 @@
 
 ### 功能項目
 1. 有登入畫面
-2. 有註冊功能
+2. 有註冊功能 (regitster->add_user)
 3. 有忘記密碼找回功能
 4. 登入後可依身份別到不同的會員中心畫面
     * 一般會員中心
@@ -33,11 +33,11 @@
     *帳號(acc)
     *密碼(password)
     *email(email)
-    *註冊時間(signin) 
+    *註冊時間(create_time) 
 ##### 會員功能
 -member    
     *姓名(name)
-    *出生年月日(bitthday)
+    *出生年月日(birthday)
     *角色(含管理員)(role)
     *居住地(addr)
     *學歷(aducation)

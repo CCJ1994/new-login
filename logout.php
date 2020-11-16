@@ -1,9 +1,4 @@
 <?php
-
-unset($_SESSION['login']);
-
+setcookie("login",'',-100);
 header("location:index.php");
-
-
-
 ?>

@@ -1,7 +1,4 @@
 <?php
-//更新使用者資料
-
-
 $dsn="mysql:host=localhost;dbname=member;charset=utf8";
 $pdo=new PDO($dsn,'root','');
 
@@ -25,4 +22,5 @@ echo "login更新<br>".$update_login_sql."<br>";
 echo "member更新<br>".$update_member_sql."<br>";
 
 header("location:admin.php");
-?> 
+
+?>
